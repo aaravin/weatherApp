@@ -21,21 +21,22 @@
         <input type='submit' ng-click='updateForecast(location)' value='Submit'>
       </form>
       <div id='city' ng-show='weatherData.cityName'>{{weatherData.cityName}}</div>
-      <div class='forecast-panel col-sm-5 col-centered' ng-repeat='forecast in weatherData.forecast'>
-        <table style="width:100%">
-          <tr>
-            <td class='dayOfWeek' rowspan='2'>{{forecast.dayOfWeek}}</td>
-            <td class='iconTemp' colspan='2'>
-              <img class='icon' ng-src='http://openweathermap.org/img/w/{{forecast.icon}}.png' height='60px' width='60px'>
-              <span class='avgTemp'>{{forecast.main}}</span>
-            </td>
-          </tr>
-          <tr>
-            <td class='minMaxTemp'>High: {{forecast.maxTemp}}&deg Low: {{forecast.minTemp}}&deg</td>
-            <td class='humidity'>Humidity: {{forecast.humidity}}%</td> 
-          </tr>
-        </table>
-      </div>
+      <table class='forecast-panel col-sm-5 col-centered' ng-repeat='forecast in weatherData.forecast'>
+        <col width="40%"/>
+        <col width="30%"/>
+        <col width="30%"/>
+        <tr>
+          <td class='dayOfWeek' rowspan='2'>{{forecast.dayOfWeek}}</td>
+          <td class='iconTemp' colspan='2'>
+            <img class='icon' ng-src='http://openweathermap.org/img/w/{{forecast.icon}}.png' height='60px' width='60px'>
+            <span class='avgTemp'>{{forecast.main}}</span>
+          </td>
+        </tr>
+        <tr>
+          <td class='minMaxTemp'>High: {{forecast.maxTemp}}&deg Low: {{forecast.minTemp}}&deg</td>
+          <td class='humidity'>Humidity: {{forecast.humidity}}%</td> 
+        </tr>
+      </table>
     </div>
   </body>
 </html>

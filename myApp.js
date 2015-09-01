@@ -17,10 +17,12 @@ app.controller('appController', function($scope, Weather) {
   $scope.updateForecast = function(location) {
     if (location.indexOf(',') === -1) {
       $scope.weatherData.cityName = 'Please enter a location in the format "City, State"';
+      $scope.weatherData.forecast = [];
     } else {
       Weather.getWeatherData(location).then(function(data) {
         if (location.split(',')[0].toUpperCase() !== data.city.name.toUpperCase()) {
           $scope.weatherData.cityName = 'Please enter a valid location';
+          $scope.weatherData.forecast = [];
         } else {
           $scope.weatherData.cityName = '5-Day Forecast for ' + data.city.name;
           for (var i = 0; i < data.list.length; i++) {

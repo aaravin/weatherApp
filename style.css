@@ -42,6 +42,12 @@ header {
 
 table {
   text-align: center;
+  table-layout: fixed;
+  width: 100px;
+}
+
+td {
+  overflow: hidden; 
 }
 
 .dayOfWeek {
