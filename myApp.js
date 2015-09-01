@@ -1,6 +1,6 @@
 var app = angular.module('myApp', ['ngAnimate']);
 
-app.controller('appController', function ($scope, Weather) {
+app.controller('appController', function($scope, Weather) {
   $scope.weatherData = {};
   $scope.weatherData.forecast = [];
 
@@ -47,12 +47,12 @@ app.controller('appController', function ($scope, Weather) {
 app.factory('Weather', function($http) {
   var getWeatherData = function(location) {
     return $http({
-      method: 'GET',
-      url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + location + '&units=imperial&cnt=5'
-    })
-    .then(function (resp) {
-      return resp.data;
-    });
+        method: 'GET',
+        url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + location + '&units=imperial&cnt=5'
+      })
+      .then(function(resp) {
+        return resp.data;
+      });
   };
 
   return {
