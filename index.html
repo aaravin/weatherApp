@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.5/angular-animate.min.js"></script>
+    <script src="myApp.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+  </head>
+  <body ng-app="myApp">
+    <header>
+      <h2>Weather App</h2>
+    </header>
+    <div class='container-fluid' ng-controller="appController">
+      <form id='form'>
+        <input class='text' placeholder='Enter city, state' ng-model='location' type='text' required>
+        <input type='submit' ng-click='updateForecast(location)' value='Submit'>
+      </form>
+      <div id='city' ng-show='weatherData.cityName'>{{weatherData.cityName}}</div>
+      <div class='forecast-panel col-sm-5 col-centered' ng-repeat='forecast in weatherData.forecast'>
+        <table style="width:100%">
+          <tr>
+            <td class='dayOfWeek' rowspan='2'>{{forecast.dayOfWeek}}</td>
+            <td class='iconTemp' colspan='2'>
+              <img class='icon' ng-src='http://openweathermap.org/img/w/{{forecast.icon}}.png' height='60px' width='60px'>
+              <span class='avgTemp'>{{forecast.main}}</span>
+            </td>
+          </tr>
+          <tr>
+            <td class='minMaxTemp'>High: {{forecast.maxTemp}}&deg Low: {{forecast.minTemp}}&deg</td>
+            <td class='humidity'>Humidity: {{forecast.humidity}}%</td> 
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

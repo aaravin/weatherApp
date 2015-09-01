@@ -1,0 +1,88 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+header {
+  text-align:center;
+  margin:10px;
+  background: #3278bc;
+  color: #FFFFFF;
+  padding:10px 0;
+}
+
+#form {
+  text-align: center;
+  margin: 20px;
+}
+
+#city{
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.forecast-panel {
+  border: 1px solid grey;
+  background-color: whitesmoke;
+  margin-bottom: 5px;
+}
+
+.first {
+  border-radius: 3px 3px 0px 0px;
+}
+
+.last {
+  border-radius: 0px 0px 3px 3px;
+}
+
+table {
+  text-align: center;
+}
+
+.dayOfWeek {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.avgTemp {
+  font-size: 20px;
+}
+
+.minMaxTemp, .humidity {
+  color: #7a7a7a;
+}
+
+.forecast-panel.ng-move,
+.forecast-panel.ng-enter,
+.forecast-panel.ng-leave {
+    -webkit-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -moz-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -ms-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -o-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+}
+
+.forecast-panel.ng-leave.ng-leave-active,
+.forecast-panel.ng-move,
+.forecast-panel.ng-enter {
+    opacity: 0;
+}
+
+.forecast-panel.ng-leave,
+.forecast-panel.ng-move.ng-move-active,
+.forecast-panel.ng-enter.ng-enter-active {
+    opacity: 1;
+}
+
+.forecast-panel.ng-enter-stagger {
+  transition-delay: 0.25s ;
+  -webkit-transition-delay: 0.25s ;
+
+  transition-duration: 0s ;
+  -webkit-transition-duration: 0s ;
+}
