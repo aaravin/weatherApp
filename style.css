@@ -29,8 +29,8 @@ header {
 }
 
 .col-centered{
-    float: none;
-    margin: 0 auto;
+  float: none;
+  margin: 0 auto;
 }
 
 .forecast-panel {
@@ -41,6 +41,7 @@ header {
 
 .main {
   text-align: center;
+  overflow: hidden; 
 }
 
 table {
