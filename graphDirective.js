@@ -33,9 +33,7 @@ angular.module('myApp').directive('graphDirective',
           .orient("left")
           .ticks(10);
 
-        //Render graph based on 'data'
         scope.render = function(data) {
-          //Set our scale's domains
           x.domain(data.map(function(d) {
             return d.dayOfWeek;
           }));
@@ -45,15 +43,12 @@ angular.module('myApp').directive('graphDirective',
             return d.maxTemp;
           }) + 5]);
 
-          //Redraw the axes
           svg.selectAll('g.axis').remove();
-          //X axis
           svg.append("g")
             .attr("class", "x-axis")
             .attr("transform", "translate(0," + height + ")")
             .call(xAxis);
 
-          //Y axis
           svg.append("g")
             .attr("class", "y-axis")
             .call(yAxis)
@@ -118,8 +113,6 @@ angular.module('myApp').directive('graphDirective',
 
         };
 
-        //Watch 'data' and run scope.render(newVal) whenever it changes
-        //Use true for 'objectEquality' property so comparisons are done on equality and not reference
         scope.$watch('data', function() {
           scope.render(scope.data);
         }, true);

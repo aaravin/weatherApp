@@ -3,11 +3,11 @@ body {
 }
 
 header {
-  text-align:center;
-  margin:10px;
+  text-align: center;
+  margin: 10px;
   background: #3278bc;
   color: #FFFFFF;
-  padding:10px 0;
+  padding: 10px 0;
 }
 
 #form {
