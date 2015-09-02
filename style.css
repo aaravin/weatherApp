@@ -71,13 +71,12 @@ td {
 }
 
 .forecast-panel.ng-move,
-.forecast-panel.ng-enter,
-.forecast-panel.ng-leave {
-    -webkit-transition: 500ms all;
-    -moz-transition: 500ms all;
-    -ms-transition: 500ms all;
-    -o-transition: 500ms all;
-    transition: 500ms all;
+.forecast-panel.ng-enter {
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    transition: all linear 0.5s;
 }
 
 .forecast-panel.ng-leave.ng-leave-active,
