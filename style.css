@@ -22,6 +22,12 @@ header {
   margin-bottom: 10px;
 }
 
+.domain {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
 .col-centered{
     float: none;
     margin: 0 auto;
@@ -33,18 +39,14 @@ header {
   margin-bottom: 5px;
 }
 
-.first {
-  border-radius: 3px 3px 0px 0px;
-}
-
-.last {
-  border-radius: 0px 0px 3px 3px;
+.main {
+  text-align: center;
 }
 
 table {
   text-align: center;
   table-layout: fixed;
-  width: 100px;
+  width: 100%;
 }
 
 td {
@@ -97,4 +99,26 @@ td {
 
   transition-duration: 0s ;
   -webkit-transition-duration: 0s ;
+}
+
+.graph.ng-move,
+.graph.ng-enter {
+    -webkit-transition: all linear 0.5s;
+    -moz-transition: all linear 0.5s;
+    -ms-transition: all linear 0.5s;
+    -o-transition: all linear 0.5s;
+    transition: all linear 0.5s;
+}
+
+.graph.ng-leave.ng-leave-active,
+.graph.ng-move,
+.graph.ng-enter {
+    opacity: 0;
+}
+
+.graph.ng-leave,
+.graph.ng-move.ng-move-active,
+.graph.ng-enter.ng-enter-active {
+    transition-delay: 1.25s;
+    opacity: 1;
 }
