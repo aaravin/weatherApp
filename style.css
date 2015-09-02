@@ -55,6 +55,12 @@ td {
   font-weight: bold;
 }
 
+@media (max-width: 500px) {
+  .dayOfWeek {
+    font-size: 20px;
+  }
+}
+
 .avgTemp {
   font-size: 20px;
 }
@@ -66,11 +72,11 @@ td {
 .forecast-panel.ng-move,
 .forecast-panel.ng-enter,
 .forecast-panel.ng-leave {
-    -webkit-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -moz-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -ms-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    -o-transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
-    transition: 500ms cubic-bezier(0.250, 0.250, 0.750, 0.750) all;
+    -webkit-transition: 500ms all;
+    -moz-transition: 500ms all;
+    -ms-transition: 500ms all;
+    -o-transition: 500ms all;
+    transition: 500ms all;
 }
 
 .forecast-panel.ng-leave.ng-leave-active,
